@@ -1,0 +1,165 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+.logo  {
+    width: auto;
+    height: 140px;
+    margin-left: 50px;
+}
+
+
+footer img {
+
+    width: auto;
+    height: 70px;
+}
+
+.card {
+    position: relative;
+}
+
+.slider-container h5 {
+    padding-bottom: 10px;
+}
+
+.custom-select {
+    width: 200px;
+    padding: 2px;
+}
+
+.wide-slider{
+    width: 180px;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding:30px
+}
+
+.fav-icon {
+    position: absolute;
+    top: 10px;
+    right:10px;
+    width: 20px;
+    height: 5px;
+    z-index: 10;
+}
+
+.card .fav-icon  {
+    position: absolute;
+    top: 10px;
+    right:10px;
+    width: 40px;
+    height: 40px;
+    z-index: 10;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card img {
+    height: 300px;
+    width: auto;
+}
+
+.card {
+    padding:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:10px;
+    background-color: rgba(241, 241, 241, 0.822);
+    height: 30rem
+}
+
+.button {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 8px 20px;
+    border-radius: 8px;
+    background-color: white;
+}
+
+.button img {
+   height: 18px;
+   padding-right: 5px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card a {
+    font-weight: 500;
+}
+
+.card-title{
+    text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        justify-content: space-evenly;
+    }
+
+    .logo  {
+        width: auto;
+        height: 100px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .filters {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        padding:60px;
+        flex-wrap: wrap;
+    }
+    
+    header  {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+    }
+
+    .logo  {
+        width: auto;
+        height: 80px;
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 500px) {
+    .logo  {
+        width: auto;
+        height: 60px;
+    }
+
+    .filters {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        padding:60px;
+        flex-wrap: wrap;
+    }
+
+
+    .slider-container h5 {
+        padding-top: 20px;
+    }
+}
+
+

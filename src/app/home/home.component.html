@@ -1,0 +1,93 @@
+<header
+  style="
+    display: flex;
+    background-image: url('/assets/drawing.svg');
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+    margin-top: -50px;
+    align-items: center;
+  "
+>
+  <img class="logo" src="/assets/logo.png" alt="" />
+</header>
+<div class="filters">
+  <div class="nameFilter">
+    <h5>Filter by name</h5>
+    <input
+      type="text"
+      [(ngModel)]="searchBeer"
+      (input)="filterBeers()"
+      placeholder="Search for beers"
+    />
+  </div>
+  <div class="slider-container">
+    <h5>Alcohol Content (%)</h5>
+    <mat-slider
+      class="wide-slider"
+      discrete
+      (input)="updateContent()"
+      step="0.1"
+    >
+      <input matSliderStartThumb [(ngModel)]="sliderValuemin" />
+      <input matSliderEndThumb [(ngModel)]="sliderValuemax" />
+    </mat-slider>
+  </div>
+  <div class="inputFilter">
+    <h5>Show only favorites</h5>
+    <input
+      class="custome-checkbox"
+      type="checkbox"
+      [(ngModel)]="isChecked"
+      id="myCheckbox"
+      (change)="filterFavorites()"
+    />
+  </div>
+
+  <div class="sort-dropdown">
+    <h5>Sort</h5>
+    <select
+      id="sortSelect"
+      [(ngModel)]="sortBy"
+      (change)="sortBeers()"
+      class="custom-select"
+    >
+      <option value="name">Sort by Name</option>
+      <option value="abv">Sort by ABV</option>
+    </select>
+  </div>
+</div>
+<div class="container">
+  <div class="card" style="width: 20rem" *ngFor="let beer of filteredBeers">
+    <img
+      class="fav-icon"
+      (click)="toggleFavorite(beer.id)"
+      [src]="isFavoriteImage(beer.id)"
+      alt=""
+    />
+    <img [src]="beer.image_url" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ beer.name }}</h5>
+      <a class="button" (click)="toggleDetails(beer.id)">
+        <img src="/assets/info-24px.svg" alt="" />
+        Details</a
+      >
+    </div>
+  </div>
+</div>
+<footer
+  style="
+    background-image: url('/assets/drawing.svg');
+    background-size: cover;
+    background-size: 1000%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 250px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  "
+>
+  <img class="logo-footer" src="/assets/logo.png" alt="" />
+</footer>

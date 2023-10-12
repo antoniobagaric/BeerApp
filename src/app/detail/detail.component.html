@@ -1,0 +1,37 @@
+<header
+  style="
+    display: flex;
+    background-image: url('/assets/drawing.svg');
+    background-size: cover;
+    background-position: center center;
+    height: 400px;
+    margin-top: -50px;
+    align-items: center;
+  "
+>
+  <img class="logo" src="/assets/logo.png" alt="" />
+</header>
+<div class="container">
+  <img [src]="beer.image_url" alt="..." />
+  <div class="details">
+    <h1>{{ beer.name }}</h1>
+    <p>{{ beer.description }}</p>
+    <p>ABV: {{ beer.abv }}%</p>
+  </div>
+</div>
+<footer
+  style="
+    background-image: url('/assets/drawing.svg');
+    background-size: cover;
+    background-size: 1000%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 250px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  "
+>
+  <img class="logo-footer" src="/assets/logo.png" alt="" />
+</footer>
